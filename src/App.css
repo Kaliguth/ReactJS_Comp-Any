@@ -1,10 +1,76 @@
-.App {
-  text-align: center;
+.leaflet-container {
+  align-items: center;
+  width: 100%;
+  height: 45vh;
 }
 
 .shadow-effects {
   font-weight: bold;
   color: transparent;
-  letter-spacing: .10em;
-  text-shadow: 1px 1px 0 #000000, -3px -3px 2px rgb(0, 0, 0), 2px 1px 3px rgba(0, 0, 0, 0);
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 0 #000000, -3px -3px 2px rgb(0, 0, 0),
+    2px 1px 3px rgba(0, 0, 0, 0);
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(46, 71, 91);
+}
+
+.texts {
+  white-space: nowrap;
+  font-size: 22px;
+  color: rgb(230, 211, 136);
+}
+
+.vertical-divider {
+  border-left: 3px solid #ffffff;
+  height: auto;
+}
+
+.strip-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.strip-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-bottom: 7px solid rgb(46, 71, 91);
+}
+
+.employee-card {
+  width: 100%;
+  min-width: 340px;
+  max-width: 350px;
+  height: 100%;
+  min-height: 200px;
+  max-height: 300px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+}
+
+.employee-image {
+  width: 100px;
+  height: 100px;
+}
+
+.fav-icon {
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.fav-icon.favorite {
+  color: yellow;
+}
+
+.fav-icon:not(.favorite) {
+  color: black;
+}
+
+.fav-icon:not(.favorite):hover {
+  color: yellow;
 }

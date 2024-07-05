@@ -37,7 +37,7 @@ The project's website is also uploaded on a Netlify domain for quick access in:<
 
 #### Notes:
 
-- Thanks to Netlify, you can access, review and test the website directly in `https://comp-any.netlify.app/`.<br>
+- Thanks to Netlify, you can access, review and test the website directly in [https://comp-any.netlify.app/](https://comp-any.netlify.app/).<br>
   There is no need to download the code, install all libraries and run the code yourself.<br>
   Note that sometimes when refreshing pages in Netlify, a `Page not found` messages appears.<br>
   When this happens, go back to the Comp-Any's home page.

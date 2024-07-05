@@ -8,12 +8,12 @@ Welcome to Comp-Any!<br>
 In here I will describe the goals and funcionalities of the project.<br>
 The project was created for my ReactJS course in software engineering studies.
 
-My project is using ReactJS, Bootstrap, and Routing, Linking etc from `react-router-dom`.<br>
+My project is using ReactJS, Bootstrap, Routing, Icons, Leaflet and more.<br>
 The project's goal is to allow visitors to search an API for employees in different companies around the world.<br>
 <b>Note the API's employees and companies are not real. This project is for studying purposes only.</b>
 
 The project's website is also uploaded on a Netlify domain for quick access in:<br>
-`https://comp-any.netlify.app/`
+[https://comp-any.netlify.app/](https://comp-any.netlify.app/)
 
 ---
 

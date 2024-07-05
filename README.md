@@ -64,7 +64,7 @@ The project's website is also uploaded on a Netlify domain for quick access in:<
 
 ---
 
-### Header component
+### <u>Header component</u>
 
 Every page in the website shows the header at the top.<br>
 
@@ -88,7 +88,7 @@ The header component allows the user to navigate between the website's pages.
 
 ---
 
-### Home page
+### <u>Home page</u>
 
 The main page for the website.<br>
 
@@ -117,7 +117,7 @@ The component includes the input, button and list. It is responsible for fetchin
 
 ---
 
-### Employee details page
+### <u>Employee details page</u>
 
 The page that the user is being redirected to when clicking the `More Information` button of an employee card.
 
@@ -147,7 +147,7 @@ The user can click the `Back` button to return to the previously visited page, o
 
 ---
 
-### Favorites page
+### <u>Favorites page</u>
 
 This page shows the user's favorited employees in `Employee card` form.
 
@@ -170,7 +170,7 @@ This page uses an array and a local storage entry of favorited employees to show
 
 ---
 
-### Error 404 page
+### <u>Error 404 page</u>
 
 This page pops up if the path given in the url is not found within the list of routes available in the website.
 
@@ -192,7 +192,7 @@ This page lets the user know the page given in the url was not found and allows 
 
 ---
 
-## Toastify
+## <u>Toastify</u>
 
 When favoriting or unfavoriting an employee, `Toasify` messages appear.<br>
 Below is an image presentation.

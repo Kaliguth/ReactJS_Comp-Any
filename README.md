@@ -21,7 +21,7 @@ The project's website is also uploaded on a Netlify domain for quick access in:<
 
 > The application is using:
 >
-> - `Visual Studio Code` IDE envirnment for writing the code
+> - `Visual Studio Code` IDE environment for writing the code
 >
 > - `React router dom` library for navigation and routing
 >

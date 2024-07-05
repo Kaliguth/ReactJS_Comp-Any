@@ -1,3 +1,6 @@
+// Error 404 page
+// Page not found message and back to home button
+
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -9,7 +12,9 @@ export default function Page404() {
       </h3>
       <br />
       <Link to="/">
-        <button className="btn btn-lg btn-light border border-dark mt-5">Back to home page</button>
+        <button className="btn btn-lg btn-light border border-dark mt-5">
+          Back to home page
+        </button>
       </Link>
     </div>
   );

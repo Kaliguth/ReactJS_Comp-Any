@@ -9,6 +9,8 @@ import ContextProvider from "./context/Context";
 import EmployeeDetailsPage from "./pages/EmployeeDetailsPage";
 import Page404 from "./pages/Page404";
 
+// Main app file
+// Contains context provider and routes
 function App() {
   return (
     <ContextProvider>

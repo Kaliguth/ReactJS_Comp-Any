@@ -1,3 +1,6 @@
+// Search results component
+// Shows employee cards list based on current company
+
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { AppContext } from "../context/Context";
@@ -10,18 +13,26 @@ export default function SearchResults() {
   const [query] = useSearchParams();
   const navigate = useNavigate();
 
+  // fetches employees from API every time the company query changes
   useEffect(() => {
-      getEmployees();
-    }, [query, getEmployees]);
+    getEmployees();
+  }, [query, getEmployees]);
 
+  // Handle search function
   const handleSearch = () => {
+    // If company input is not empty
     if (searchInput !== "") {
+      // Changes company value
       searchCompany(searchInput);
+      // Clears company input box
       setSearchInput("");
+      // Navigate to search the new company query
       navigate(`/?search=${searchInput.toLowerCase()}`);
     }
   };
 
+  // Function to allow pressing enter to search
+  // instead of clicking the search button
   const handleKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch();

@@ -1,3 +1,6 @@
+// Header component
+// Contains all header objects
+
 import React from "react";
 import { Link } from "react-router-dom";
 

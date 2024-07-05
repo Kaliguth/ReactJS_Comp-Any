@@ -1,3 +1,6 @@
+// Employee details component
+// Contains and shows all extended employee details
+
 import React, { useContext } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { AppContext } from "../context/Context";
@@ -6,22 +9,32 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 export default function EmployeeDetails({ employee }) {
+  // Context values needed
   const { employee_ar, favorites_ar, addToFavorites, removeFromFavorites } =
     useContext(AppContext);
+  // Employee details
   const { name, dob, email, phone, location, picture, login } = employee;
   const navigate = useNavigate();
 
+  // Boolean to check if the employee is favorited
   const isFavorite = favorites_ar.some((fav) => fav.login.uuid === login.uuid);
 
+  // Handle favorite icon click
   const handleFavoriteClick = () => {
+    // If employee is in favorites
     if (isFavorite) {
+      // Remove from favorites and show toastify message
       removeFromFavorites(employee);
       toast.warning(`${name.first} removed from favorites!`);
+      // Find employee in main array and
+      // make sure same employee is still shown after deleted from faves
       const index = employee_ar.findIndex(
         (emp) => emp.login.uuid === login.uuid
       );
+      // Change url to indicate the employee is not longer in favorites
       navigate(`/employee/?company=kali&index=${index}`);
     } else {
+      // If employee is not in favorites, add it and show toastify message
       addToFavorites(employee);
       toast.success(`${name.first} added to favorites!`);
     }
@@ -30,6 +43,7 @@ export default function EmployeeDetails({ employee }) {
   return (
     <div className="bg-light bg-opacity-50 border border-dark rounded p-3">
       <div className="d-flex justify-content-end m-1">
+        {/* Favorite icon changes based on favorite status of the employee */}
         {isFavorite ? (
           <FaStar onClick={handleFavoriteClick} className="fav-icon favorite" />
         ) : (

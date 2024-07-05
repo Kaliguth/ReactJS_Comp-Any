@@ -1,4 +1,6 @@
-// EmployeeCard.js
+// Employee card component
+// Gets an employee and shows details inside the card
+
 import React, { useContext } from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -6,17 +8,23 @@ import { AppContext } from "../context/Context";
 import { toast } from "react-toastify";
 
 export default function EmployeeCard({ employee, company, index }) {
+  // Context values needed
   const { favorites_ar, addToFavorites, removeFromFavorites } =
     useContext(AppContext);
+  // Employee parameters
   const { name, dob, location, picture, login } = employee;
 
+  // Boolean to check if the employee is favorited
   const isFavorite = favorites_ar.some((fav) => fav.login.uuid === login.uuid);
 
+  // Function to handle favorite icon click
   const handleFavoriteClick = () => {
+    // If already favorited, remove from favorites and show toastify message
     if (isFavorite) {
       removeFromFavorites(employee);
       toast.warning(`${name.first} removed from favorites!`);
     } else {
+      // If not favorited yet, add to favorites and show toastify message
       addToFavorites(employee);
       toast.success(`${name.first} added to favorites!`);
     }
@@ -52,6 +60,7 @@ export default function EmployeeCard({ employee, company, index }) {
             More information
           </button>
         </Link>
+        {/* Favorite icon changes based on favorite status of the employee */}
         {isFavorite ? (
           <FaStar
             onClick={handleFavoriteClick}

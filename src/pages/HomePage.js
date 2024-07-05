@@ -1,3 +1,6 @@
+// Home page
+// Uses search results component to show employees
+
 import React from "react";
 import SearchResults from "../components/SearchResults";
 

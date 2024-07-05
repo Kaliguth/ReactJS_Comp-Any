@@ -1,8 +1,12 @@
+// Context file
+
 import React, { useState, createContext, useCallback, useEffect } from "react";
 
+// Exported context variable
 export const AppContext = createContext();
 
 export default function ContextProvider({ children }) {
+  // Context variables
   const [employee_ar, setEmployeeAr] = useState([]);
   const [favorites_ar, setFavoritesAr] = useState([]);
   const [company, setCompany] = useState("kali");
@@ -16,6 +20,8 @@ export default function ContextProvider({ children }) {
     }
   }, []);
 
+  // Fetch employees from the API based on current company
+  // Also saves to local storage
   const getEmployees = useCallback(async () => {
     setLoading(true);
     try {
@@ -69,6 +75,7 @@ export default function ContextProvider({ children }) {
     [company, getEmployees]
   );
 
+  // Global values and functions to share with app's components and pages
   const glovalVals = {
     employee_ar,
     getEmployees,
